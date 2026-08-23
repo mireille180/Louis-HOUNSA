@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#1565C0">
+
+    <link rel="manifest"
+          href="manifest.json">
+
+    <title>Ma Survie</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <small>MON ORGANISATION</small>
+        <h1>🛡️ Ma Survie</h1>
+    </div>
+
+    <button id="installBtn" hidden>
+        Installer
+    </button>
+</header>
+
+<main>
+
+<section class="solde">
+    <span>💰 Solde disponible</span>
+
+    <h2 id="solde">
+        0 F CFA
+    </h2>
+
+    <p id="budget">
+        Budget conseillé aujourd'hui :
+        0 F CFA
+    </p>
+</section>
+
+<section class="cards">
+
+    <div>
+        <span>💵 Revenus</span>
+        <strong id="revenus">
+            0 F CFA
+        </strong>
+    </div>
+
+    <div>
+        <span>💸 Dépenses</span>
+        <strong id="depenses">
+            0 F CFA
+        </strong>
+    </div>
+
+    <div>
+        <span>🏦 Épargne</span>
+        <strong id="epargne">
+            0 F CFA
+        </strong>
+    </div>
+
+    <div>
+        <span>🎯 Objectif</span>
+        <strong id="progression">
+            0 %
+        </strong>
+    </div>
+
+</section>
+
+<section class="panel">
+
+<h2>➕ Ajouter une opération</h2>
+
+<button onclick="ajouter('revenu')">
+    💵 Revenu
+</button>
+
+<button onclick="ajouter('depense')">
+    💸 Dépense
+</button>
+
+<button onclick="ajouter('epargne')">
+    🏦 Épargne
+</button>
+
+</section>
+
+<section class="panel">
+
+<h2>🎯 Objectif d'épargne</h2>
+
+<input
+    id="objectifInput"
+    type="number"
+    placeholder="Exemple : 100000">
+
+<button onclick="objectif()">
+    Enregistrer
+</button>
+
+<div class="progress">
+    <div id="barre"></div>
+</div>
+
+<p id="objectifTexte">
+    0 / 0 F CFA
+</p>
+
+</section>
+
+<section class="panel">
+
+<h2>📋 Historique</h2>
+
+<div id="historique">
+    Aucune opération.
+</div>
+
+<button
+    class="danger"
+    onclick="effacer()">
+
+    🗑️ Effacer les données
+
+</button>
+
+</section>
+
+</main>
+
+<nav>
+
+<a href="#">
+    🏠
+    <small>Accueil</small>
+</a>
+
+<a href="#historique">
+    📋
+    <small>Historique</small>
+</a>
+
+<a href="#objectif">
+    🎯
+    <small>Objectif</small>
+</a>
+
+</nav>
+
+<script src="app.js"></script>
+
+</body>
+</html>
